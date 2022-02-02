@@ -1,0 +1,69 @@
+<!--
+    * index.html
+     : 대부분의 웹 서버가 디폴트로 index.html을 찾아보도록 설정되어 있음
+     (index = 첫 번째)
+
+    * !
+     : html의 base를 나타냄 (직접 작성 X)
+
+    * BEM 
+     : Block Element Modifier
+      - 많은 사람들이 적용시키는 규칙으로
+      좀 더 쉽게 읽히는 css를 갖게 하기 위함.
+       => 부모__자식
+       => If have modifier - 부모--modifier
+
+    * css를 사용할 때 프로그래머들이 모두 id대신 class를 사용하기로 약속
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="css/styles.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to Kokoa talk</title>
+  </head>
+  <body>
+    <div class="status-bar">
+      <div class="status-bar__column">
+        <span>No service</span>
+        <i class="fas fa-wifi"></i>
+        <!-- i(icon) - wifi Icon-->
+      </div>
+
+      <div class="status-bar__column">
+        <span>18:43</span>
+      </div>
+      <div class="status-bar__column">
+        <span>100%</span>
+        <!-- Battery Icon -->
+        <i class="fas fa-battery-full fa-lg"></i>
+        <!-- Lightning Icon -->
+        <i class="fas fa-bolt"></i>
+      </div>
+    </div>
+
+    <header class="welcome-header">
+      <h1 class="welcome-header__title">Welcome to KakaoTalk</h1>
+      <p class="welcome-header__description">
+        If you have a Kakao Account, log in with your email or phone number.
+      </p>
+    </header>
+
+    <form id="login-form">
+      <input type="text" placeholder="Email or phone number" />
+      <input type="password" placeholder="Password" />
+      <input type="submit" value="Log In" />
+      <input type="submit" value="Sign Up" />
+      <a href="#">Find Kakao Acoount or Password</a>
+    </form>
+
+    <!-- script tag는 body가 끝나기 직전에 넣어준다. -->
+    <script
+      src="http://kit.fontawesome.com/6478f529f2.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
