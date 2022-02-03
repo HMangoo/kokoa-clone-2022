@@ -53,3 +53,17 @@
   border: 1px solid teal;
   padding: 0px 8px;
 }
+
+.user-component__sender {
+  font-size: 16px;
+  font-weight: bold;
+}
+.user-component__message {
+  font-size: 13px;
+}
+
+.user-component__send-time {
+  color: rgba(0, 0, 0, 0.5);
+  display: block;
+  margin-bottom: 10px;
+}
