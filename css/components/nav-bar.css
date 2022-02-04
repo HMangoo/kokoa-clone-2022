@@ -11,7 +11,7 @@
   width가 100%인 상태에서 padding을 주면 width가 더 늘어남 
   => box-sizing: border-box;을 설정함으로써 box size를 유지하라고 알림
   */
-  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  border-top: var(--normal-border);
 }
 .nav__list {
   display: flex;

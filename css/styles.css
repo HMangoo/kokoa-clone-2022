@@ -18,6 +18,7 @@
 @import "screen/header.css";
 @import "screen/login-form.css";
 @import "screen/friends.css";
+@import "screen/find.css";
 
 body {
   font-family: "Open Sans", sans-serif;

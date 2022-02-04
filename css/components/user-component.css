@@ -22,7 +22,7 @@
 .user-component__subtitle {
   margin-top: 8px;
   font-size: 15px;
-  color: rgba(0, 0, 0, 0.5);
+  color: var(--normal-font-color);
 }
 
 .user-component__avatar--xl {
@@ -39,10 +39,6 @@
   font-weight: 400;
   font-size: 14px;
   color: initial;
-}
-
-.fa-heart {
-  color: skyblue;
 }
 
 .user-component:last-child {
@@ -63,7 +59,7 @@
 }
 
 .user-component__send-time {
-  color: rgba(0, 0, 0, 0.5);
+  color: var(--normal-font-color);
   display: block;
   margin-bottom: 10px;
 }

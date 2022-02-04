@@ -15,3 +15,18 @@
 .screen-header__icons span {
   margin-left: 20px;
 }
+
+.find-screen-setting {
+  position: relative;
+}
+.find-screen-setting__notification {
+  position: absolute;
+  left: 5px;
+  bottom: 20px;
+
+  background-color: tomato;
+  display: flex;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
