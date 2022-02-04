@@ -56,6 +56,7 @@
 }
 .user-component__message {
   font-size: 13px;
+  display: flex;
 }
 
 .user-component__send-time {

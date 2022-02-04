@@ -1,0 +1,22 @@
+.settings__setting {
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 20px;
+  color: var(--normal-font-color);
+  display: flex;
+  align-items: center;
+}
+
+.settings__setting i {
+  margin-right: 20px;
+}
+
+.settings__condition {
+  display: flex;
+  justify-content: space-between;
+}
+
+.settings__right-text {
+  color: var(--normal-font-color);
+  opacity: 0.5;
+}

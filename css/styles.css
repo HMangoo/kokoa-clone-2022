@@ -11,14 +11,18 @@
 @import "components/status-bar.css";
 @import "components/nav-bar.css";
 @import "components/screen-header.css";
+@import "components/alt-screen-header.css";
 @import "components/user-component.css";
 @import "components/badge.css";
+@import "components/icon-row.css";
 
 /* Screen */
 @import "screen/header.css";
 @import "screen/login-form.css";
 @import "screen/friends.css";
 @import "screen/find.css";
+@import "screen/more.css";
+@import "screen/setting.css";
 
 body {
   font-family: "Open Sans", sans-serif;
@@ -26,4 +30,16 @@ body {
 
 .main-screen {
   padding: 0px var(--horizontal-space);
+}
+
+.exclamation-mark {
+  display: block;
+  text-align: center;
+  width: 11px;
+  height: 11px;
+  margin-left: 5px;
+  border: 2px solid tomato;
+  border-radius: 50%;
+  color: tomato;
+  font-weight: bold;
 }
