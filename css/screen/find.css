@@ -104,3 +104,24 @@
 .open-chat-post__like-count span {
   margin-left: 3px;
 }
+
+@keyframes heartBeat {
+  0% {
+    color: white;
+    transform: none;
+  }
+  50% {
+    color: tomato;
+    transform: scale(1.5);
+  }
+  100% {
+    color: white;
+    transform: none;
+  }
+}
+.open-chat-post__like-count:hover i {
+  will-change: transform;
+  /* 브라우저에게 렌더링 힌트를 주고  실행되길 기대되는 element를 알림
+  -> 애니메이션이 더 나아지는 효과*/
+  animation: heartBeat 1s linear infinite;
+}

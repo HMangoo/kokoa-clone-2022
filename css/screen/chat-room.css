@@ -13,11 +13,6 @@
 }
 /* position이 fix가 되면 layer를 갖는다 */
 /* z-index를 조절 - z-index가 클수록 윗 layer */
-
-.main-chat-room {
-  padding-top: 120px;
-}
-
 #chat-screen .alt-header {
   z-index: 1;
 }
@@ -26,7 +21,30 @@
   z-index: 2;
 }
 
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
 .main-chat-room {
+  padding-top: 150px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -45,6 +63,8 @@
   width: 100%;
   display: flex;
   margin-bottom: 25px;
+
+  animation: fadeInLeft 1s linear;
 }
 
 .message-row img {
@@ -81,6 +101,8 @@
 
 .message-row--own {
   justify-content: flex-end;
+
+  animation: fadeInRight 1s linear;
 }
 
 .message-row--own .message__bubble {
@@ -107,6 +129,7 @@
   box-sizing: border-box; /* padding이 element를 안보이게 하기 때문에 추가*/
   justify-content: space-between;
   align-items: center;
+  transition: transform 0.3s ease-in-out;
 }
 
 .reply .reply__column:first-child {
@@ -124,6 +147,9 @@
 
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 20px;
+
+  transition: all 0.3s ease-in-out;
+  /* transition : 애니메이션을 실행시킬 때 조정할 수 있게함*/
 }
 
 .reply__column:last-child > i,
@@ -147,4 +173,27 @@
 .reply__column button:focus,
 .reply__column button:active {
   outline: none;
+}
+
+/* property는 내부적으로 focus된 element가 있는지 알 수 있도록 함*/
+
+.reply .reply__column:first-child,
+.reply .fa-kiss-wink-heart,
+.reply button {
+  transition: opacity 0.3s ease-in-out;
+}
+
+.reply:focus-within .reply__column:first-child,
+.reply:focus-within .fa-kiss-wink-heart,
+.reply:focus-within button {
+  opacity: 0;
+}
+
+.reply:focus-within input {
+  width: 95vw;
+  transform: translateX(-15%) translateY(-80px);
+}
+
+.reply:focus-within {
+  transform: translateY(80px);
 }

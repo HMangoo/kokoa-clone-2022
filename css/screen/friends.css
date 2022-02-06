@@ -29,3 +29,37 @@
   color: var(--normal-font-color);
   font-size: 12px;
 }
+
+@keyframes hideSplashScreen {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+/* visibility: hidden; 
+  => 단지 마우스가 클릭하지 못하도록 한 것임.
+  => HTML에는 남아 있음.
+  
+    => 아예 없애기 위해서는 Java script를 사용해야함. */
+
+#splash-screen {
+  background-color: var(--yellow);
+  position: absolute;
+  height: 100vh; /* screen의 100% */
+  width: 100vw; /* screen의 100% */
+  top: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 128px;
+
+  animation: hideSplashScreen 0.4s ease-in-out forwards;
+  animation-delay: 2s; /* 2초 후 애니메이션 실행 */
+}
+
+/* forwards : animation의 마지막 keyframe을 기억한다. */
