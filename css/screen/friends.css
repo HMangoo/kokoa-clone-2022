@@ -39,6 +39,14 @@
     visibility: hidden;
   }
 }
+
+.friends-screen__friens li {
+  margin-bottom: 10px;
+}
+
+.user-component__music i {
+  margin-left: 5px;
+}
 /* visibility: hidden; 
   => 단지 마우스가 클릭하지 못하도록 한 것임.
   => HTML에는 남아 있음.
@@ -47,6 +55,7 @@
 
 #splash-screen {
   background-color: var(--yellow);
+  background-image: url("riot_background.jpg");
   position: absolute;
   height: 100vh; /* screen의 100% */
   width: 100vw; /* screen의 100% */
